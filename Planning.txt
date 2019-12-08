@@ -1,0 +1,43 @@
+Web based calculator application.
+I will need to use VS code editor. Main logic will be written in JavaScript or equavalent. Basic HTML for calculator layout and CSS for styling. Application will be executed using Node.
+
+HTML blueprint
+1 main div called calulator
+2 input tag (edit text) which is set to disabled
+3 div tag for calculator keys
+4 buttons for operators (+,-,/,*)
+5 buttons for numbers 0 to 9
+6 button for decimal indicator
+7 button for clearing input
+8 button for equal sign
+
+CSS blueprint
+1 calculator class
+2 calc screen class
+3 html tag set format
+4 universal format (*) 
+5 button tag format
+6 button tag hover format
+7 operator class
+8 clear button class
+9 clear button hover format
+10 equal sign class
+11 equal sign hover format
+12 calculator keys class
+
+JS logic
+1 calculator object
+2 function to refresh calculator screen
+3 constant 'keys' that include all buttons that are part of the keys class
+4 add listeners to each key
+5 function to handle digit pressed
+6 function to handle decimal point pressed
+7 function to handle operator button pressed
+8 performCalc object
+9 function to reset calculator
+
+Additional features
+Add the % function.
+Add the square root and square functions.
+Make it possible to clear an entry without resetting the calculator.
+Make it possibe to type in negative numbers (e.g -3).
