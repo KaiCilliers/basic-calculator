@@ -38,6 +38,13 @@ JS logic
 
 Additional features
 Add the % function.
+    add the frontend button
+    include backend listener and operations
 Add the square root and square functions.
+    add frontend buttons
+    include backend listeners and operations
 Make it possible to clear an entry without resetting the calculator.
+    add clear button frontend button
+    include backend listeners to set display digit to zero
 Make it possibe to type in negative numbers (e.g -3).
+    update handle operator method or add a +/- button
