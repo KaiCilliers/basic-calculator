@@ -108,6 +108,11 @@ function resetCalculator() {
      console.log(calculator);
 }
 
+function clearCalculator() {
+    calculator.displayValue = '0';
+    console.log(calculator);
+}
+
 /**
  * Key Presses
  */
@@ -135,6 +140,12 @@ keys.addEventListener('click', (event) => {
 
     if (target.classList.contains('all-clear')) {
         resetCalculator();
+        updateDisplay();
+        return;
+    }
+
+    if (target.classList.contains('clear')) {
+        clearCalculator();
         updateDisplay();
         return;
     }
