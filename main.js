@@ -113,6 +113,17 @@ function clearCalculator() {
     console.log(calculator);
 }
 
+function toggleNegative() {
+    const { displayValue } = calculator;
+
+    if (displayValue.charAt(0) == "-") {
+        calculator.displayValue = displayValue.substring(1, displayValue.length);
+    } else {
+        calculator.displayValue = "-" + displayValue;
+    }
+    console.log(calculator);
+}
+
 /**
  * Key Presses
  */
@@ -146,6 +157,12 @@ keys.addEventListener('click', (event) => {
 
     if (target.classList.contains('clear')) {
         clearCalculator();
+        updateDisplay();
+        return;
+    }
+
+    if (target.classList.contains('special')) {
+        toggleNegative();
         updateDisplay();
         return;
     }
