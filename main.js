@@ -55,6 +55,15 @@ function handleOperator(nextOperator) {
         return;
     }
 
+    if (nextOperator == 'x2') {
+        const result = displayValue * displayValue;
+
+        calculator.displayValue = String(result);
+        calculator.firstOperand = result;
+        console.log(calculator);
+        return;
+    }
+
     // If a new operator is clicked
     if (operator && calculator.awaitSecondOperand)  {
         // Replace old operator with new
