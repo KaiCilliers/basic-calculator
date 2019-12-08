@@ -46,7 +46,18 @@ function handleOperator(nextOperator) {
     const { firstOperand, displayValue, operator } = calculator;
     const inputValue = parseFloat(displayValue);
 
+    if (nextOperator == '√') {
+        const result = Math.sqrt(displayValue);
+
+        calculator.displayValue = String(result);
+        calculator.firstOperand = result;
+        console.log(calculator);
+        return;
+    }
+
+    // If a new operator is clicked
     if (operator && calculator.awaitSecondOperand)  {
+        // Replace old operator with new
         calculator.operator = nextOperator;
         console.log(calculator);
         return;
@@ -74,6 +85,8 @@ const performCalculation = {
     '+': (firstOperand, secondOperand) => firstOperand + secondOperand,
 
     '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
+
+    '%': (firstOperand, secondOperand) => firstOperand % secondOperand,
 
     '=': (firstOperand, secondOperand) => secondOperand
 };
